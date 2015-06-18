@@ -9,7 +9,7 @@ def calc_dist(a, b, c, d):
     return dist
 
 #abre o arquivo e o converte em dois vetores X e Y
-arquivo = pd.read_csv("artificial_2.data", header=None, sep=',')
+arquivo = pd.read_csv("artificial_10.data", header=None, sep=',')
 valores = arquivo.iloc[:,:2]
 matrix = valores.as_matrix()
 x=[]
@@ -19,7 +19,7 @@ for px, py in matrix:
     y.append(py)
 
 #Valor de K para esse dataset
-k = 2    
+k = 10   
 
 #forma o grafico dos dados antes da classificacao
 plt.clf()

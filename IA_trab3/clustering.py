@@ -1,3 +1,11 @@
+'''
+TRABALHO PRATICO DE INTELIGENCIA ARTIFICIAL
+Prof Bruno Nogueira
+Academicos:
+    Augusto Ribas
+    Bruno Nazario
+    Doglas Sorgatto
+'''
 from numpy import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -102,8 +110,10 @@ for px, py in matrix:
     x.append(px)
     y.append(py)  
 
+print len(x)
+
 #forma o grafico dos dados antes da classificacao
-titulo = "Antes de classificar \n K={}".format(k)
+titulo = "Antes de agrupar \n K={}".format(k)
 saver = "antes_k{}.png".format(k)
 plt.clf()
 plt.scatter(x, y, alpha=0.5, c='green')
@@ -121,7 +131,7 @@ for z in range(10):
     sse.append(valor)
 
 #grafico da evolucao do SSE
-titulo = "Evolucao da soma do erro quadratico\n K={}".format(k)
+titulo = "Evolucao da somatoria do erro quadratico\n K={}".format(k)
 saver = "erro_k{}.png".format(k)
 plt.clf()
 plt.plot(seed_val, sse, c='r')
@@ -131,7 +141,7 @@ plt.xlabel('SEED_VALUES')
 plt.savefig(saver)
 print "fim da clusterizacao"
 
-escolha = raw_input("Deseja gerar os graficos de classificacao? [S,N] ")
+escolha = raw_input("Deseja gerar os graficos de agrupamento? [S,N] ")
 if escolha.lower()=='s':
     escolha = input("Digite o SEED_VALUE que deseja plotar: ")
     grafico = True
@@ -139,3 +149,5 @@ if escolha.lower()=='s':
     print "Fim da plotagem"
 else:
     print "Fim do processamento"
+
+print 'fim'

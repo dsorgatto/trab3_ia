@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.19)  18 JUN 2015 17:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.19)  19 JUN 2015 18:57
 entering extended mode
 **relatorio.tex
 (C:\Users\Doglas\git\trab3_ia\IA_trab3\Tex\relatorio.tex
@@ -595,103 +595,63 @@ LaTeX Info: Redefining \nameref on input line 30.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-Package natbib Warning: Citation `scikit-learn' on page 1 undefined on input li
-ne 45.
-
-
-Package natbib Warning: Citation `clustering' on page 1 undefined on input line
- 52.
-
-
-Package natbib Warning: Citation ``' on page 1 undefined on input line 58.
-
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-
-LaTeX Warning: Reference `acuraciasfig' on page 3 undefined on input line 129.
-
-
-Package natbib Warning: Citation `horton_kenta1996' on page 3 undefined on inpu
-t line 177.
-
-
-Package natbib Warning: Citation `nakai_kaneshisa1991' on page 3 undefined on i
-nput line 177.
-
-[3]
-
-LaTeX Warning: Reference `acuraciasfig' on page 4 undefined on input line 179.
-
-
-Package natbib Warning: Citation `ghazvini_etal2014' on page 4 undefined on inp
-ut line 179.
-
-
-LaTeX Warning: Reference `kknn' on page 4 undefined on input line 181.
-
-
-LaTeX Warning: Reference `arvdecisao' on page 4 undefined on input line 207.
-
-
-Package natbib Warning: Citation `berzal_etal2003' on page 4 undefined on input
- line 207.
-
-[4] [5] <antes_k2.png, id=84, 578.16pt x 433.62pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+<antes_k2.png, id=78, 578.16pt x 433.62pt>
 File: antes_k2.png Graphic file (type png)
  <use antes_k2.png>
-Package pdftex.def Info: antes_k2.png used on input line 216.
+Package pdftex.def Info: antes_k2.png used on input line 174.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<antes_k3.png, id=86, 578.16pt x 433.62pt>
+<antes_k3.png, id=80, 578.16pt x 433.62pt>
 File: antes_k3.png Graphic file (type png)
  <use antes_k3.png>
-Package pdftex.def Info: antes_k3.png used on input line 217.
+Package pdftex.def Info: antes_k3.png used on input line 175.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<antes_k4.png, id=87, 578.16pt x 433.62pt>
+<antes_k4.png, id=81, 578.16pt x 433.62pt>
 File: antes_k4.png Graphic file (type png)
  <use antes_k4.png>
-Package pdftex.def Info: antes_k4.png used on input line 218.
+Package pdftex.def Info: antes_k4.png used on input line 176.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<antes_k5.png, id=88, 578.16pt x 433.62pt>
+<antes_k5.png, id=82, 578.16pt x 433.62pt>
 File: antes_k5.png Graphic file (type png)
  <use antes_k5.png>
-Package pdftex.def Info: antes_k5.png used on input line 219.
+Package pdftex.def Info: antes_k5.png used on input line 177.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<antes_k6.png, id=89, 578.16pt x 433.62pt>
+<antes_k6.png, id=83, 578.16pt x 433.62pt>
 File: antes_k6.png Graphic file (type png)
  <use antes_k6.png>
-Package pdftex.def Info: antes_k6.png used on input line 220.
+Package pdftex.def Info: antes_k6.png used on input line 178.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<antes_k7.png, id=90, 578.16pt x 433.62pt>
+<antes_k7.png, id=84, 578.16pt x 433.62pt>
 File: antes_k7.png Graphic file (type png)
  <use antes_k7.png>
-Package pdftex.def Info: antes_k7.png used on input line 221.
+Package pdftex.def Info: antes_k7.png used on input line 179.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<antes_k8.png, id=91, 578.16pt x 433.62pt>
+<antes_k8.png, id=85, 578.16pt x 433.62pt>
 File: antes_k8.png Graphic file (type png)
  <use antes_k8.png>
-Package pdftex.def Info: antes_k8.png used on input line 222.
+Package pdftex.def Info: antes_k8.png used on input line 180.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<antes_k9.png, id=92, 578.16pt x 433.62pt>
+<antes_k9.png, id=86, 578.16pt x 433.62pt>
 File: antes_k9.png Graphic file (type png)
  <use antes_k9.png>
-Package pdftex.def Info: antes_k9.png used on input line 223.
+Package pdftex.def Info: antes_k9.png used on input line 181.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<antes_k10.png, id=93, 578.16pt x 433.62pt>
+<antes_k10.png, id=87, 578.16pt x 433.62pt>
 File: antes_k10.png Graphic file (type png)
  <use antes_k10.png>
-Package pdftex.def Info: antes_k10.png used on input line 224.
+Package pdftex.def Info: antes_k10.png used on input line 182.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
- [6
+ [4
 
  <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/antes_k2.png> <C:/Users/Doglas/git/
 trab3_ia/IA_trab3/Tex/antes_k3.png> <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/
@@ -699,61 +659,61 @@ antes_k4.png> <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/antes_k5.png> <C:/User
 s/Doglas/git/trab3_ia/IA_trab3/Tex/antes_k6.png> <C:/Users/Doglas/git/trab3_ia/
 IA_trab3/Tex/antes_k7.png> <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/antes_k8.
 png> <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/antes_k9.png> <C:/Users/Doglas/
-git/trab3_ia/IA_trab3/Tex/antes_k10.png>] <erro_k2.png, id=108, 578.16pt x 433.
+git/trab3_ia/IA_trab3/Tex/antes_k10.png>] <erro_k2.png, id=102, 578.16pt x 433.
 62pt>
 File: erro_k2.png Graphic file (type png)
 
 <use erro_k2.png>
-Package pdftex.def Info: erro_k2.png used on input line 233.
+Package pdftex.def Info: erro_k2.png used on input line 191.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
- <erro_k3.png, id=109, 578.16pt x 433.62pt>
+ <erro_k3.png, id=103, 578.16pt x 433.62pt>
 File: erro_k3.png Graphic file (type png)
  <use erro_k3.png>
-Package pdftex.def Info: erro_k3.png used on input line 234.
+Package pdftex.def Info: erro_k3.png used on input line 192.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<erro_k4.png, id=110, 578.16pt x 433.62pt>
+<erro_k4.png, id=104, 578.16pt x 433.62pt>
 File: erro_k4.png Graphic file (type png)
  <use erro_k4.png>
-Package pdftex.def Info: erro_k4.png used on input line 235.
+Package pdftex.def Info: erro_k4.png used on input line 193.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<erro_k5.png, id=111, 578.16pt x 433.62pt>
+<erro_k5.png, id=105, 578.16pt x 433.62pt>
 File: erro_k5.png Graphic file (type png)
  <use erro_k5.png>
-Package pdftex.def Info: erro_k5.png used on input line 236.
+Package pdftex.def Info: erro_k5.png used on input line 194.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<erro_k6.png, id=112, 578.16pt x 433.62pt>
+<erro_k6.png, id=106, 578.16pt x 433.62pt>
 File: erro_k6.png Graphic file (type png)
  <use erro_k6.png>
-Package pdftex.def Info: erro_k6.png used on input line 237.
+Package pdftex.def Info: erro_k6.png used on input line 195.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<erro_k7.png, id=113, 578.16pt x 433.62pt>
+<erro_k7.png, id=107, 578.16pt x 433.62pt>
 File: erro_k7.png Graphic file (type png)
  <use erro_k7.png>
-Package pdftex.def Info: erro_k7.png used on input line 238.
+Package pdftex.def Info: erro_k7.png used on input line 196.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<erro_k8.png, id=114, 578.16pt x 433.62pt>
+<erro_k8.png, id=108, 578.16pt x 433.62pt>
 File: erro_k8.png Graphic file (type png)
  <use erro_k8.png>
-Package pdftex.def Info: erro_k8.png used on input line 239.
+Package pdftex.def Info: erro_k8.png used on input line 197.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<erro_k9.png, id=115, 578.16pt x 433.62pt>
+<erro_k9.png, id=109, 578.16pt x 433.62pt>
 File: erro_k9.png Graphic file (type png)
  <use erro_k9.png>
-Package pdftex.def Info: erro_k9.png used on input line 240.
+Package pdftex.def Info: erro_k9.png used on input line 198.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<erro_k10.png, id=116, 578.16pt x 433.62pt>
+<erro_k10.png, id=110, 578.16pt x 433.62pt>
 File: erro_k10.png Graphic file (type png)
  <use erro_k10.png>
-Package pdftex.def Info: erro_k10.png used on input line 241.
+Package pdftex.def Info: erro_k10.png used on input line 199.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
- [7
+ [5
 
 
  <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/erro_k2.png> <C:/Users/Doglas/git/t
@@ -765,57 +725,57 @@ ab3/Tex/erro_k7.png> <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/erro_k8.png> <C
 3_ia/IA_trab3/Tex/erro_k10.png>]
 File: antes_k5.png Graphic file (type png)
  <use antes_k5.png>
-Package pdftex.def Info: antes_k5.png used on input line 250.
+Package pdftex.def Info: antes_k5.png used on input line 208.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<depois_1.png, id=132, 578.16pt x 433.62pt>
+<depois_1.png, id=125, 578.16pt x 433.62pt>
 File: depois_1.png Graphic file (type png)
  <use depois_1.png>
-Package pdftex.def Info: depois_1.png used on input line 251.
+Package pdftex.def Info: depois_1.png used on input line 209.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<depois_2.png, id=133, 578.16pt x 433.62pt>
+<depois_2.png, id=126, 578.16pt x 433.62pt>
 File: depois_2.png Graphic file (type png)
  <use depois_2.png>
-Package pdftex.def Info: depois_2.png used on input line 252.
+Package pdftex.def Info: depois_2.png used on input line 210.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<depois_3.png, id=134, 578.16pt x 433.62pt>
+<depois_3.png, id=127, 578.16pt x 433.62pt>
 File: depois_3.png Graphic file (type png)
  <use depois_3.png>
-Package pdftex.def Info: depois_3.png used on input line 253.
+Package pdftex.def Info: depois_3.png used on input line 211.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<depois_4.png, id=135, 578.16pt x 433.62pt>
+<depois_4.png, id=128, 578.16pt x 433.62pt>
 File: depois_4.png Graphic file (type png)
  <use depois_4.png>
-Package pdftex.def Info: depois_4.png used on input line 254.
+Package pdftex.def Info: depois_4.png used on input line 212.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<depois_5.png, id=136, 578.16pt x 433.62pt>
+<depois_5.png, id=129, 578.16pt x 433.62pt>
 File: depois_5.png Graphic file (type png)
  <use depois_5.png>
-Package pdftex.def Info: depois_5.png used on input line 255.
+Package pdftex.def Info: depois_5.png used on input line 213.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<depois_6.png, id=137, 578.16pt x 433.62pt>
+<depois_6.png, id=130, 578.16pt x 433.62pt>
 File: depois_6.png Graphic file (type png)
  <use depois_6.png>
-Package pdftex.def Info: depois_6.png used on input line 256.
+Package pdftex.def Info: depois_6.png used on input line 214.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<depois_7.png, id=138, 578.16pt x 433.62pt>
+<depois_7.png, id=131, 578.16pt x 433.62pt>
 File: depois_7.png Graphic file (type png)
  <use depois_7.png>
-Package pdftex.def Info: depois_7.png used on input line 257.
+Package pdftex.def Info: depois_7.png used on input line 215.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
 
-<depois_8.png, id=139, 578.16pt x 433.62pt>
+<depois_8.png, id=132, 578.16pt x 433.62pt>
 File: depois_8.png Graphic file (type png)
  <use depois_8.png>
-Package pdftex.def Info: depois_8.png used on input line 258.
+Package pdftex.def Info: depois_8.png used on input line 216.
 (pdftex.def)             Requested size: 181.18439pt x 135.88306pt.
- [8
+ [6
 
 
  <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/depois_1.png> <C:/Users/Doglas/git/
@@ -824,44 +784,35 @@ depois_3.png> <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/depois_4.png> <C:/User
 s/Doglas/git/trab3_ia/IA_trab3/Tex/depois_5.png> <C:/Users/Doglas/git/trab3_ia/
 IA_trab3/Tex/depois_6.png> <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/depois_7.
 png> <C:/Users/Doglas/git/trab3_ia/IA_trab3/Tex/depois_8.png>]
-(C:\Users\Doglas\git\trab3_ia\IA_trab3\Tex\relatorio.bbl
-
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
-
-)
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
-[9
+(C:\Users\Doglas\git\trab3_ia\IA_trab3\Tex\relatorio.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
+ [7
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
- (C:\Users\Doglas\git\trab3_ia\IA_trab3\Tex\relatorio.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 265.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 265.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
+
+(C:\Users\Doglas\git\trab3_ia\IA_trab3\Tex\relatorio.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `relatorio.out' has not changed.
 (rerunfilecheck)             Checksum: 2E364E0AA35B3E5A559EBE76EC822BCF;652.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
- 7214 strings out of 493921
- 100688 string characters out of 3147279
- 198493 words of memory out of 3000000
- 10369 multiletter control sequences out of 15000+200000
+ 7211 strings out of 493921
+ 100719 string characters out of 3147279
+ 203410 words of memory out of 3000000
+ 10366 multiletter control sequences out of 15000+200000
  17580 words of font info for 43 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,8n,32p,1331b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,8n,32p,497b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Doglas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecti1200.pk> <C:\Users\Doglas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecbx1200.pk> <C:\Users\Doglas\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+\ecbx1200.pk> <C:\Users\Doglas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecti1200.pk> <C:\Users\Doglas\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
 our\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Doglas\AppData\Local\MiKTeX\2.9\f
 onts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Doglas\AppData\Local\M
 iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Doglas\AppD
@@ -872,9 +823,9 @@ crm1440.pk> <C:\Users\Doglas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on relatorio.pdf (9 pages, 739958 bytes).
+Output written on relatorio.pdf (7 pages, 729101 bytes).
 PDF statistics:
- 443 PDF objects out of 1000 (max. 8388607)
+ 427 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
  211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

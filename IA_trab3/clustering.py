@@ -55,13 +55,16 @@ def clusteriza(seed_val, x, y, k, grafico):
             #gera o grafico dos clusters
             titulo = "Iteracao {} com {} pontos".format(itera, k)
             saver = "depois_{}.png".format(itera)
-            cores = ['b', 'r', 'y', 'g', 'c', 'm', 'k', 'w', '0.5', '0.25']
+            shap = ['o', 'v', 'D', '*', 's']
+            cores = ['b', 'r', 'y', 'g', 'c', 'm', 'k', 'w']
             plt.clf()
             j = 0
             for i in range(0, k*2, 2):
-                plt.scatter(cluster[i], cluster[i+1], alpha=0.5, c=cores[j])
-                plt.scatter(pontos[j][0], pontos[j][1], s=100, c=cores[j], alpha=0.2)
+                plt.scatter(cluster[i], cluster[i+1], alpha=0.5, c=cores[j%8], marker=shap[j%5])
+                plt.scatter(pontos[j][0], pontos[j][1], s=100, c=cores[j%8], alpha=0.2)
                 j += 1
+                print "Ponto {} com {} elementos".format(j, len(cluster[i]))
+            print "\n"
             plt.ylabel('Y')
             plt.xlabel('X')
             plt.title(titulo)
@@ -110,8 +113,6 @@ for px, py in matrix:
     x.append(px)
     y.append(py)  
 
-print len(x)
-
 #forma o grafico dos dados antes da classificacao
 titulo = "Antes de agrupar \n K={}".format(k)
 saver = "antes_k{}.png".format(k)
@@ -130,6 +131,9 @@ for z in range(10):
     valor = clusteriza(z*2, x, y, k, grafico)
     sse.append(valor)
 
+print "SSE min: {}, seed: {}".format(min(sse), sse.index(min(sse))*2)
+print "SSE max: {}, seed: {}".format(max(sse), sse.index(max(sse))*2)
+
 #grafico da evolucao do SSE
 titulo = "Evolucao da somatoria do erro quadratico\n K={}".format(k)
 saver = "erro_k{}.png".format(k)
@@ -145,7 +149,7 @@ escolha = raw_input("Deseja gerar os graficos de agrupamento? [S,N] ")
 if escolha.lower()=='s':
     escolha = input("Digite o SEED_VALUE que deseja plotar: ")
     grafico = True
-    clusteriza(escolha, x, y, k, grafico)
+    print clusteriza(escolha, x, y, k, grafico)
     print "Fim da plotagem"
 else:
     print "Fim do processamento"

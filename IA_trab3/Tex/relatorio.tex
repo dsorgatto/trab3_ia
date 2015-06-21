@@ -107,106 +107,64 @@ Cada um dos conjuntos de dados está disposto em um arquivo no formato CSV (\emp
 
 \section{Resultados e Discussão}
 
-De modo geral, o algoritmo KNN obteve a maior média geral das acurácias e com maior precisão (menor variabilidade entre os resultados obtidos) como pode ser visto na tabela \ref{acuracias_geral}.
-
-
 \begin{table}[!ht]
-\centering
-\caption{Média e desvios gerais de todas as acurácias obtidas}
-\label{acuracias_geral}
-\begin{tabular}{|l|l|l|}
-\hline
-Algoritmo & Média & Desvio Padrão\\
-\hline
-Árvore de decisão & 0.7549212 &0.1846360\\
-Knn & 0.7872640 &0.1733436 \\
-Naive Bayes &
-0.7463543 &0.2417319\\
-\hline
-\end{tabular}
+	\centering
+	\caption{Comparação de eficiência - Menor SSE}	
+	\label{tabMelhor}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	K & Seed & SSE & Convergir & Min & Max & Fora & Acurácia\\
+	\hline
+	2 & 2 & 1.17178486551 & 5 & 29 & 31 & 1 & 0.98333 \\
+	\hline
+	3 & 2 & 1.82592591238 & 5 & 30 & 30 & 0 & 1.00000 \\
+	\hline
+	4 & 0 & 2.40978786268 & 9 & 28 & 32 & 2 & 0.98333\\
+	\hline
+	5 & 6 & 2.47892858032 & 8 & 29 & 31 & 2 & 0.98666\\
+	\hline
+	6 & 10 & 3.38661981209 & 8 & 28 & 34 & 5 & 0.97222\\
+	\hline
+	7 & 4 & 3.64855687389 & 8 & 29 & 31 & & 0.98571\\
+	\hline
+	8 & 10 & 4.62062310715 & 5 & 25 & 35 & & 0.96250\\ %com seed 6 precisa de 18 para convergir com mesmo SSE e acuracia
+	\hline
+	9 & 16 & 4.6656708739 & 13 & 28 & 32 & & 0.98518\\
+	\hline
+	10 & 10 & 5.70866779082 & 11 & 28 & 32 & & 0.98333\\
+	\hline
+	\end{tabular}
 \end{table}
 
-No entanto, dos 10 conjuntos de dados avaliados, o algorítimo Naive Bayes obteve a maior acurácia média em 7 deles, seguido do KNN que obteve a melhor acurácia em 3 e o algorítimo de Árvore de Decisão que não teve a melhor acurácia para nenhum conjunto de dados como podemos observar na tabela \ref{acuracias} e na figura \ref{acuraciasfig}
-
 \begin{table}[!ht]
-\centering
-\caption{Médias obtidas por conjunto de dados para cada algoritmo}
-\label{acuracias}
-
-Média\\
-\begin{tabular}{|l|l|l|l|}
-\hline
-Conjunto de dados & decision tree & knn & naive bayes \\
-\hline                              
-Banknote Authentication		&$0.9832223$ &$0.9985401$   &$0.8206231$\\
-Breast Cancer               &$0.9370844$ &$0.9590793$   &$0.9634271$\\
-Ecoli                       &$0.7303922$ &$0.7594474$   &$0.8104278$\\
-Fertility                   &$0.8100000$ &$0.8600000$   &$0.8300000$\\
-Habermans Survival          &$0.6431183$ &$0.7023656$   &$0.7453763$\\
-Iris                        &$0.9266667$ &$0.9200000$   &$0.9466667$\\
-Mammographic Mass           &$0.7614458$ &$0.7819277$   &$0.8096386$\\
-Pima Indians Diabetes       &$0.6914046$ &$0.7460526$   &$0.7551777$\\
-Planning Relax              &$0.5935673$ &$0.6210526$   &$0.6426901$\\
-Yeast                       &$0.4723109$ &$0.5241747$   &$0.1395157$\\
-
-\hline
-\end{tabular}
-
-\vspace{0.5cm}
-Desvio Padrão\\
-\begin{tabular}{|l|l|l|l|}
-\hline                              
-Conjunto de dados & decision tree & knn & naive bayes\\
-\hline
-Banknote Authentication    &$0.01036215$ &$ 0.003077642 $ &$ 0.06519682$\\
-Breast Cancer              &$0.04473660$ &$ 0.038628010 $ &$ 0.02506400$\\
-Ecoli                      &$0.16417374$ &$ 0.239384217 $ &$ 0.20628346$\\
-Fertility                  &$0.12866839$ &$ 0.126491106 $ &$ 0.17029386$\\
-Habermans Survival         &$0.14484407$ &$ 0.098540629 $ &$ 0.07948557$\\
-Iris                       &$0.08577893$ &$ 0.075686162 $ &$ 0.06126244$\\
-Mammographic Mass          &$0.04879146$ &$ 0.050305113 $ &$ 0.04536553$\\
-Pima Indians Diabetes      &$0.07348156$ &$ 0.069537673 $ &$ 0.04507926$\\
-Planning Relax             &$0.15234015$ &$ 0.063453212 $ &$ 0.09191607$\\
-Yeast                      &$0.04864499$ &$ 0.051461378 $ &$ 0.05181031$\\
-
-\hline
-\end{tabular}
-
+	\centering
+	\caption{Comparação de eficiência - Maior SSE}	
+	\label{tabPior}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	K & Seed & SSE & Convergir & Min & Max & Fora & Acurácia\\
+	\hline
+	2 & 0 & 1.18583121013 & 4 & 27 & 33 & 3 & 0.95000 \\
+	\hline
+	3 & 8 & 4.18779991225 & 7 & 30 & 30 & 0 & 1.00000 \\
+	\hline
+	4 & 12 & 7.00024804537 & 4 & 28 & 32 & 2 & 0.98333\\
+	\hline
+	5 & 8 & 7.47642260367 & 50 & 0 & 61 & 60 & 0.60000\\
+	\hline
+	6 & 0 & 18.7881874706 & 50 & 0 & 123 & 120 & 0.33333\\
+	\hline
+	7 &  &  &  &  &  & &\\
+	\hline
+	8 &  &  &  &  &  & &\\
+	\hline
+	9 &  &  &  &  &  & &\\
+	\hline
+	10 &  &  &  &  &  & &\\
+	\hline
+	\end{tabular}
 \end{table}
 
-Para o conjunto de dados Yeast, a baixa acurácia em relação aos outros conjuntos de dados foi observada em outras tentativas também, por exemplo, Horton e Nakai \citep{horton_kenta1996} reportam uma acurácia de 55\% usando um modelo de Redes Bayesianas para classificar os exemplos enquanto Nakai e Kaneshisa \citep{nakai_kaneshisa1991} obtiveram 83\%, no entanto, para esse artigo é um precursor desse conjunto de dados, ou seja, os dados usados aqui não são exatamente os usados por estes autores, que ainda contaram com regras pre-determinadas derivadas a partir da consulta a especialistas. 
-
-Observamos também na figura \ref{acuraciasfig} que apesar do Naive Bayes se sair bem na maioria dos casos, nos três casos onde ele obteve menor acurácia, banknote authentication, fertility e yeast, dois deles tratam de atributos em sua maioria contínuos, enquanto fertility tem somente classes hierárquicas que já são fornecidas como valores reais. No caso do "Bankbote Authentication", trata-se de atributos de imagens, parâmetros das imagens registradas de cheques legítimos e falsificados, assim imperfeições como quando se apaga palavras de um cheque original podem ser detectados. Ghazvini e colaboradores \citep{ghazvini_etal2014} também observaram uma performance inferior do Naive Bayes em relação ao algoritimo de Máquina de vetores de suporte e Redes neurais artificiais, estes autores reportam que seus melhores resultados foram obtidos com rede neural do tipo Multilayer Perceptron.
-
-Temos também que o número de vizinhos mais próximos utilizado pelo algoritmo Knn, como observado na tabela \ref{vizinhos} é extremamente variável, sendo que para alguns conjuntos, vemos que muitos vizinhos produziam melhores resultados, enquanto outros, poucos vizinhos produziam os melhores resultados. A escolha de 11 vizinhos foi a mais comum, ocorrida para quatro conjunto de dados, mas para o conjunto de dados sobre fraudes de cheques, apenas três vizinhos deram o melhor resultado, sendo onde obtivemos a maior acurácia. Além disso, como podemos ver na figura \ref{kknn}, para conjuntos de dados como o Iris, podemos supor, que pelos resultados obtidos, que 7 é um resultado ótimo, já que ao aumentar ou diminuir o número de vizinhos para a votação da classe diminuiu a acurácia da validação cruzada, enquanto para o conjunto de dados de câncer de mama de Wisconsin (BCW), vemos que enquanto aumentávamos o número de vizinhos, ainda estávamos melhorando a acurácia, o que pode sugerir que a avaliação de valores ainda maiores do que os testados aqui podem resultar em uma maior acurácia do algoritmo, mas para manter a comparabilidade dos resultados, escolhemos a priori um conjunto de valores de vizinho mais próximos utilizados para todos os conjuntos de dados.
-
-\begin{table}[!ht]
-\centering
-\caption{Número de vizinhos utilizado para o calculo de acurácia do algoritmo Knn}
-\label{vizinhos}
-\begin{tabular}{|l|l|}
-\hline
-Conjunto de dados & Número de vizinhos ótimo  \\
-\hline                              
-Banknote Authentication		&$3$ \\
-Breast Cancer               &$11$ \\
-Ecoli                       &$9$ \\
-Fertility                   &$5$ \\
-Habermans Survival          &$9$ \\
-Iris                        &$7$ \\
-Mammographic Mass           &$11$ \\
-Pima Indians Diabetes       &$11$ \\
-Planning Relax              &$11$ \\
-Yeast                       &$9$ \\
-
-\hline
-\end{tabular}
-
-\end{table}
-
-Apesar da Árvore de decisão ter o pior resultado para 7 dos 10 conjuntos de dados avaliados aqui, seu resultado nunca é tão discrepante dos outros algorítimos, como quando o Naive bayes teve sua acurácia 5 vezes menor que o melhor resultado para o dados Yeast. Um ponto positivo da Árvore de decisão é a facilidade com que o seu resultado pode ser interpretado, mesmo por pessoas leigas quanto ao funcionamento do algorítimo. Ao produzir as Árvores de decisão, como apresentado na figura \ref{arvdecisao}, esse resultado pode ser facilmente interpretado e utilizado por outras pessoas \citep{berzal_etal2003}
-
-Nossa avaliação sugere que não é simples determinar o melhor algorítimo independente do conjunto de dados. Mesmo o Naive Bayes, que teve a melhor performance geral, teve uma performance insatisfatória para alguns problemas, como por exemplo no caso de Yeast em que ele foi o pior, muito abaixo da média dos outros dois algorítimos e no caso dos Cheques falsificados, onde uma performance superior, como a obtida pelo Knn pode significar uma grande economia para os bancos. Além disso, para problemas como do Iris, onde estamos tentando classificar espécies vegetais a partir de medidas de flores, usuários finais podem ficar mais satisfeitos com uma Árvore de decisão impressa em um guia de identificação de plantas do que ter a necessidade de usar um computador para conseguir se utilizar de um modelo de classificação criado.
 
 \begin{landscape}
 \begin{figure}[!ht]
@@ -260,6 +218,6 @@ Nossa avaliação sugere que não é simples determinar o melhor algorítimo ind
 \end{landscape}
 
 \newpage
-\bibliography{Trabalho_IA.bib}
+\bibliography{Trabalho_IA}
 
 \end{document}

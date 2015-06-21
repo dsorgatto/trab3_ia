@@ -29,7 +29,7 @@ def clusteriza(seed_val, x, y, k, grafico):
     #controla as iteracoes
     itera = 0
     comparador = True
-    while itera <= 50 and comparador:
+    while itera < 50 and comparador:
         itera += 1
         indices = []
         for i in range(len(x)):
@@ -85,7 +85,7 @@ def clusteriza(seed_val, x, y, k, grafico):
                 if a == pontos[i][1]:
                     contador += 1
                 j += 1
-        
+
         #verifica se houve convergencia
         if contador == k*2:
             comparador = False

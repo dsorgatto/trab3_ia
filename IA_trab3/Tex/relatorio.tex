@@ -156,7 +156,9 @@ O objetivo do algoritmo que implementamos é se aproximar da divisão apontada n
 
 \section{Resultados e Discussão}
 \label{discussao}
+Após aplicar o algoritmo K-médias aos conjuntos de dados fornecidos pelo professor e visualizarmos a apresentação dos dados (figura \ref{antes}), e termos acesso aos valores do SSE para os seed que escolhemos nas dez iterações pedidas e que são apresentados na figura \ref{erros}, podemos proceder a uma análise do que foi encontrado.
 
+A tabela \ref{tabMelhor} apresenta os melhores resultados do algoritmo K-médias. Ela é formada por colunas onde estão apresentadas as informações: ``K'', contendo o valor de centros de grupo utilizado, o valor do \emph{seed} que obteve o melhor somatório de erro quadrático (SSE), o valor do SSE obtido, o número de iterações necessárias para a convergência dos centros de grupo, o mínimo e o máximo de elementos em um grupo (Min e Max), a quantidade de elementos que foram alocados incorretamente (\emph{Fora}) e a acurácia do algoritmo para aquele conjunto de dados.
 \begin{table}[!ht]
 	\centering
 	\caption{Comparação de eficiência - Menor SSE}	
@@ -185,6 +187,13 @@ O objetivo do algoritmo que implementamos é se aproximar da divisão apontada n
 	\hline
 	\end{tabular}
 \end{table}
+Esta acurácia é baseada no valor, fornecido pelo professor, de que cada grupo de dados deve conter 30 elementos. Como podemos ler na tabela \ref{tabMelhor} as acurácias para o melhor resultado estão todas acima de 95\%, demonstrando a eficiência do algoritmo para os \emph{seeds} listados na coluna 2.
+
+Um caso interessante que merece atenção aconteceu no conjunto de dados 8, onde houveram vários pontos com o mesmo valor para o SSE, mas que produziram diferentes números de etapas no processo de agrupamento. O primeiro \emph{seed} com o menor SSE é 6, mas este precisa de 18 iterações para convergir. com o \emph{seed} sendo 10 foram necessárias apenas 5 iterações, o que mostra que mesmo que o resultado seja o menor SSE é importante acompanhar o processo de agrupamento, pois alguns são mais rápidos (precisam de menos iterações) que outros.
+
+Foi colocado como condição de parada a convergência dos centros de grupo ou 50 iterações. Para os melhores valores do SSE não houve necessidade de mais de 13 iterações, como foi o caso do conjunto com 9 grupos, que apresentou o maior número delas.
+
+Já na tabela \ref{tabPior} mostramos o resultado quando se escolhem os maiores valores de SSE como formadores do processo de agrupamento. A partir do conjunto com k igual a 4  houveram em todos os conjuntos seguintes, pontos sem elementos em sua proximidade. Percebam que o valor do SSE cresce rapidamente de um conjunto de dados para outro, comprovando que as distâncias para os centros de grupo estão cada vez maiores.
 
 \begin{table}[!ht]
 	\centering
@@ -200,21 +209,28 @@ O objetivo do algoritmo que implementamos é se aproximar da divisão apontada n
 	\hline
 	4 & 12 & 7.00024804537 & 4 & 28 & 32 & 2 & 0.98333\\
 	\hline
-	5 & 8 & 7.47642260367 & 50 & 0 & 61 & 60 & 0.60000\\
+	5 & 8 & 7.47642260367 & >50 & 0 & 61 & 60 & 0.60000\\
 	\hline
-	6 & 0 & 18.7881874706 & 50 & 0 & 123 & 120 & 0.33333\\
+	6 & 0 & 18.7881874706 & >50 & 0 & 123 & 120 & 0.33333\\
 	\hline
-	7 & 12 & 23.488383509 & 50 & 0 & 115 & 120 & 0.42875\\
+	7 & 12 & 23.488383509 & >50 & 0 & 115 & 120 & 0.42875\\
 	\hline
-	8 & 18 & 79.7031992156 & 50 & 0 & 240 & 210 & 0.12500 \\
+	8 & 18 & 79.7031992156 & >50 & 0 & 240 & 210 & 0.12500 \\
 	\hline
-	9 & 18 & 122.065360325 & 50 & 0 & 270 & 240 & 0.11111\\
+	9 & 18 & 122.065360325 & >50 & 0 & 270 & 240 & 0.11111\\
 	\hline
-	10 & 0 & 62.8291736825 & 50 & 0 & 156 & 240 & 0.20000\\
+	10 & 0 & 62.8291736825 & >50 & 0 & 156 & 240 & 0.20000\\
 	\hline
 	\end{tabular}
 \end{table}
 
+Em todos os conjuntos de dados com k maior que 4, para os piores valores do SSE, não foi atingida a convergência e a acurácia ficou muito abaixo daquela apresentada na tabela anterior.
+
+Um fato curioso se mostra para os valores de k até 4. Eles possuem um maior SSE, mas a acurácia se manteve boa, chegando a 100\% para k igual a 3, e não houve centro sem elementos. Realmente não sabemos explicar o motivo da exclusão de todos os elementos de um centro, mas que a escolha de um bom \emph{seed} é fundamental para não acontecer essa discrepância isso está provado.
+
+Para o conjunto de dados com k igual a 2 e valor de SSE não mínimo, o segundo menor, houve uma acurácia de 100\%, para um \emph{seed} de valor 6. Essa análise nos leva a crer que este conjunto de dados possua ruídos na distribuição, pois um SSE levemente maior fornece uma melhor acurácia. Essa situação não foi apresentada nas tabelas, pois foi estabelecido que se deveria trabalhar com o menor valor de SSE.
+
+Nos arquivos anexos encontram-se diretórios com os gráficos gerados para a evolução do agrupamento de cada conjunto de dados. Em cada diretório está presente a apresentação do conjunto de dados antes de ser agrupado, as etapas do processo de agrupamento para o melhor seed e com o menor SSE e um gráfico com a evolução do SSE para os \emph{seeds} que empregamos.
 
 \begin{landscape}
 \begin{figure}[!ht]
@@ -264,6 +280,13 @@ O objetivo do algoritmo que implementamos é se aproximar da divisão apontada n
     \includegraphics[width=0.42\textwidth]{depois_6.png}
 \end{figure}
 \end{landscape}
+
+\section{Considerações Finais}
+O algoritmo K-Médias é um algoritmo de agrupamento por particionamento. É eficiente, rápido e de razoável implementação. Seu ponto fraco consiste no fato de que os pontos aleatórios que se tornarão centros dos grupos não podem ser previstos ou controlados, necessitando uma séries de testes, com base na tentativa e erro, para se encontrar o melhor valor da semente da função de geração dos pontos aleatórios (\emph{seed}).
+
+De posse de um bom conjunto de centros de grupos o algoritmo se mostra eficiente, tendo acurácia maior que 95\% para todos os casos de teste que nos foram passados.
+
+Percebemos, com o uso do algoritmo, que o processo de agrupamento pode ser extremamente útil para a compreensão de grandes massas de dados e que a escolha de boas funções de distância e de geração randômica dos centros de grupo podem fazer a diferença entre o sucesso e o fracasso do trabalho de análise de dados.
 
 \newpage
 \bibliography{Trabalho_IA}

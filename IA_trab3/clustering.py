@@ -37,7 +37,7 @@ def clusteriza(seed_val, x, y, k, grafico):
             for j in range(len(pontos)):
                 distancia.append(calc_dist(x[i], pontos[j][0], y[i], pontos[j][1]))
             indices.append(distancia.index(min(distancia)))
-        
+            
         #cria os cluster e os povoa
         cluster = []
         for i in range(k*2):
@@ -49,7 +49,7 @@ def clusteriza(seed_val, x, y, k, grafico):
                     cluster[m].append(x[i])
                     cluster[m+1].append(y[i])
             m += 2
-        
+
         #gera os graficos para o SEED_VALUE pedido
         if grafico:
             #gera o grafico dos clusters
@@ -71,23 +71,16 @@ def clusteriza(seed_val, x, y, k, grafico):
             plt.savefig(saver)
         
         #calcula as medias e atualiza os pontos
-        j = 0
         contador = 0
         for i in range(k):
+            a = pontos[i][0]
             if len(cluster[i*2])> 0:
-                a = pontos[i][0]
-                pontos[i][0] = np.mean(cluster[j])
-                if a == pontos[i][0]:
-                    contador += 1
-                j += 1
-                a = pontos[i][1]
-                pontos[i][1] = np.mean(cluster[j])
-                if a == pontos[i][1]:
-                    contador += 1
-                j += 1
-
+                pontos[i][0] = np.mean(cluster[i*2])
+                pontos[i][1] = np.mean(cluster[i*2+1])
+            if a == pontos[i][0]:
+                contador += 1
         #verifica se houve convergencia
-        if contador == k*2:
+        if contador == k:
             comparador = False
             
     #calculo da Soma do Erro Quadratico

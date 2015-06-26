@@ -74,10 +74,11 @@ def clusteriza(seed_val, x, y, k, grafico):
         contador = 0
         for i in range(k):
             a = pontos[i][0]
+            b = pontos[i][1]
             if len(cluster[i*2])> 0:
                 pontos[i][0] = np.mean(cluster[i*2])
                 pontos[i][1] = np.mean(cluster[i*2+1])
-            if a == pontos[i][0]:
+            if a == pontos[i][0] and b == pontos[i][1]:
                 contador += 1
         #verifica se houve convergencia
         if contador == k:
@@ -118,10 +119,9 @@ plt.savefig(saver)
 
 sse = []
 seed_val = []
-grafico = False
 for z in range(10):
     seed_val.append(z*2)
-    valor = clusteriza(z*2, x, y, k, grafico)
+    valor = clusteriza(z*2, x, y, k, False)
     sse.append(valor)
 
 print "SSE min: {}, seed: {}".format(min(sse), sse.index(min(sse))*2)
@@ -141,8 +141,7 @@ print "fim da clusterizacao"
 escolha = raw_input("Deseja gerar os graficos de agrupamento? [S,N] ")
 if escolha.lower()=='s':
     escolha = input("Digite o SEED_VALUE que deseja plotar: ")
-    grafico = True
-    print clusteriza(escolha, x, y, k, grafico)
+    print clusteriza(escolha, x, y, k, True)
     print "Fim da plotagem"
 else:
     print "Fim do processamento"

@@ -80,7 +80,7 @@ minimizar a variância intra-grupo e maximizar a variância inter-grupo. Como cr
 convergência usuais, pode-se citar o número de iterações que o algoritmo executa e o número de
 realocações de centros de grupo.
 
-Para que esse algoritmo funcione centro do grupo, ou \textit{centróide},  deve ser gerado aleatoriamente, dentro do espaço de dados existente. Essa função de geração aleatória é de suma importância para o sucesso do algoritmo, pois sementes de inicialização (\emph{seeds}) podem gerar dados aleatórios tão próximos que algum grupo fica vazio, ou acabam se sobrepondo.
+Para que esse algoritmo funcione o centro do grupo, ou \textit{centróide},  deve ser gerado aleatoriamente, dentro do espaço de dados existente. Essa função de geração aleatória é de suma importância para o sucesso do algoritmo, pois sementes de inicialização (\emph{seeds}) podem gerar dados aleatórios tão próximos que algum grupo fica vazio, ou acabam se sobrepondo.
 
 Também pode acontecer dos centros de grupo vazios ``sumirem'' da área de dados. Isso acontece quando a realocação dos centros de grupo que não tenham elementos gera novos centros com coordenadas $(0, 0)$, dando a impressão do desaparecimento dos centros de grupo. Para evitar esse problema os algoritmos k-médias que estão em bibliotecas prontas não permitem a criação de grupos vazios.
 
@@ -193,9 +193,9 @@ Esta acurácia é baseada no valor, fornecido pelo professor, de que cada grupo 
 
 Um caso interessante que merece atenção aconteceu no conjunto de dados 8, onde houveram vários pontos com o mesmo valor para o SSE, mas que produziram diferentes números de etapas no processo de agrupamento. O primeiro \emph{seed} com o menor SSE é 6, mas este precisa de 18 iterações para convergir. com o \emph{seed} sendo 10 foram necessárias apenas 5 iterações, o que mostra que mesmo que o resultado seja o menor SSE é importante acompanhar o processo de agrupamento, pois alguns são mais rápidos (precisam de menos iterações) que outros. O mesmo acontecimento foi observado para k=7, onde o menor \textit{seed} é apontado como 10, mas fornece 11 iterações para convergência, enquanto que com \textit{seed} igual a 4 tem-se o mesmo SSE e apenas 8 iterações.
 
-Foi colocado como condição de parada a convergência dos centros de grupo ou 50 iterações. Para os melhores valores do SSE não houve necessidade de mais de 13 iterações, como foi o caso do conjunto com 9 grupos, que apresentou o maior número delas. Já na tabela \ref{tabPior} se percebe que a maioria dos processos de agrupamento foram interrompidos pela condição de parada de 50 iterações.
+Foi colocado como condição de parada a convergência dos centros de grupo ou 50 iterações. Para os melhores valores do SSE não houve necessidade de mais de 13 iterações, como foi o caso do conjunto com 9 grupos, que apresentou o maior número delas. Já na tabela \ref{tabPior} se percebe que a maioria dos processos de agrupamento foram interrompidos pela condição de parada de 50 iterações, pois havia pelo menos um grupo de dados com zero elementos.
 
-Já na tabela \ref{tabPior} mostramos o resultado quando se escolhem os maiores valores de SSE como formadores do processo de agrupamento. A partir do conjunto com k igual a 4  houveram em todos os conjuntos seguintes, pontos sem elementos em sua proximidade. Percebam que o valor do SSE cresce rapidamente de um conjunto de dados para outro, comprovando que as distâncias para os centros de grupo estão cada vez maiores e havendo o ``sumiço'' de centros de grupo\footnote{Esse ``sumiço'' foi explicado anteriormente e consiste na atribuição da coordenada (0,0) para os centros que não possuem elementos no grupo.}.
+Já na tabela \ref{tabPior} mostramos o resultado quando se escolhem os maiores valores de SSE como formadores do processo de agrupamento. A partir do conjunto com k igual a 4 houveram em todos os conjuntos seguintes, pontos sem elementos em sua proximidade, ou seja, ao menos um grupo vazio. Percebam que o valor do SSE cresce acima dos valores da tabela \ref{tabMelhor}, pois com um grupo vazio a soma das distâncias para os demais centros de grupo retorna um valor maior.
 
 \begin{table}[!ht]
 	\centering
@@ -221,14 +221,16 @@ Já na tabela \ref{tabPior} mostramos o resultado quando se escolhem os maiores 
 	\hline
 	9 & 12 & 13.2138619568 & >50 & 0 & 61 & 120 & 0.55555\\
 	\hline
-	10 & 0 & 10.1564550088 & >50 & 0 & 59 & 220 & 0.60000\\
+	10 & 0 & 10.1564550088 & >50 & 0 & 59 & 60 & 0.80000\\
 	\hline
 	\end{tabular}
 \end{table}
 
+Para evitar o problema do ``sumiço'' de pontos devido a grupos com zero elementos, foi colocada uma cláusula condicional que não altera o valor dos centros de grupo quando não possuem elementos, mantendo-os na posição original.
+
 Em todos os conjuntos de dados com k maior que 4, para os piores valores do SSE, não foi atingida a convergência e a acurácia ficou muito abaixo daquela apresentada na tabela anterior.
 
-Um fato curioso se mostra para os valores de k até 4. Eles possuem um maior SSE, mas a acurácia se manteve boa, chegando a 100\% para k igual a 3, e não houve centro sem elementos. Realmente a escolha de um bom \emph{seed} é fundamental para não acontecer essa discrepância com o agrupamento coo está provado.
+Um fato curioso se mostra para os valores de k até 4. Eles possuem um maior SSE, mas a acurácia se manteve boa, chegando a 100\% para k igual a 3, e não houve centro sem elementos. Realmente a escolha de um bom \emph{seed} é fundamental para não acontecer essa discrepância com o agrupamento como está descrito.
 
 Para o conjunto de dados com k igual a 2 e valor de SSE não mínimo, o segundo menor, houve uma acurácia de 100\%, para um \emph{seed} de valor 6. Essa análise nos leva a crer que este conjunto de dados possua ruídos na distribuição, pois um SSE levemente maior fornece uma melhor acurácia. Essa situação não foi apresentada nas tabelas, pois foi estabelecido que se deveria trabalhar com o menor valor de SSE.
 
@@ -290,7 +292,7 @@ O algoritmo K-Médias é um algoritmo de agrupamento por particionamento. É efi
 
 De posse de um bom conjunto de centros de grupos o algoritmo se mostra eficiente, tendo acurácia maior que 95\% para todos os casos de teste que nos foram passados e não precisando de muitas iterações para atingir a convergência.
 
-No caso de escolha errada dos valores de \textit{seeds} pode-se incorrer em grupos vazios e no ``sumiço'' dos centros de grupo, prejudicando muito a eficiência do algoritmo.
+No caso de escolha errada dos valores de \textit{seeds} pode-se incorrer em grupos vazios e no ``sumiço'' dos centros de grupo, prejudicando a eficiência do algoritmo.
 
 Percebemos, com o uso do algoritmo, que o processo de agrupamento pode ser extremamente útil para a compreensão de grandes massas de dados e que a escolha de boas funções de distância e de geração randômica dos centros de grupo podem fazer a diferença entre o sucesso e o fracasso do trabalho de análise de dados.
 
